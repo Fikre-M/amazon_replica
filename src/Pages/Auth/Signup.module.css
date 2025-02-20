@@ -1,0 +1,139 @@
+
+/* Main container to center the content */
+.authContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+}
+
+
+/* Styling for the form container */
+.signinForm {
+    background-color: #fff;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px; /* Form should not stretch too wide */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all child elements horizontally */
+    justify-content: flex-start;
+}
+
+/* Logo styling */
+.logo {
+    margin-bottom: 2rem; /* Space between the logo and the form */
+    max-width: 150px;
+    width: 100%;
+    display: block; /* Ensure it's a block element and centered */
+}
+
+/* Input and button styling */
+.inputGroup {
+    margin-bottom: 1.5rem;
+    text-align: left;
+    width: 100%; /* Ensures inputs stretch to the full width of the form */
+}
+
+.inputGroup label {
+    font-size: 14px;
+    color: #333;
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.inputGroup input:focus{
+    outline: 2px solid skyblue;
+}
+.loginSigninButton {
+    width: 110%;
+    padding: 1rem;
+    background-color: #ff9900; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.loginSigninButton:hover {
+  background-color: #e68900; 
+    /* background-color: var(--primary-shade); */
+}
+.loginSigninButton{
+    padding: 10px 0px;
+    font-size: 14px;
+}
+
+.agreementText {
+    font-size: 14px;
+    color: #555;
+    margin-top: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.agreementText a {
+    color: skyblue;
+    /* text-decoration: none; */
+    transition: color 0.3s ease;
+}
+
+.agreementText a:hover {
+    color: red;
+}
+
+
+
+/* Styling for the account creation button */
+.createAccountButton {
+    width: 90%;
+    padding: 1rem;
+    background-color: #eaeeea; 
+    color: rgb(11, 11, 11);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.createAccountButton:hover {
+  background-color: #aab0aa; /* Darker green on hover */
+}
+.loginSigninButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40px; /* Ensure button has enough height */
+  width: 100%;
+}
+
+
+/* Make the layout responsive */
+@media (max-width: 500px) {
+    .signinForm {
+        padding: 1.5rem;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .loginSigninButton,
+    .createAccountButton {
+        padding: 0.8rem;
+    }
+}
