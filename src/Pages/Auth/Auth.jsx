@@ -1,12 +1,10 @@
-// *Updated 
 import React, { useState, useContext } from "react";
 import classes from "./Signup.module.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { auth } from "../../Utility/firebase"; 
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword} from 'firebase/auth'
 import { DataContext } from "../../Components/DataProvider/Dataprovider";
 import { Type } from "../../Utility/action.type";
-// import { FadeLoader } from "react-loader-spinner";
 
 
 function Auth() {
@@ -20,9 +18,11 @@ function Auth() {
   })
   // console.log(password, email);
 
-  const [{user}, dispatch] = useContext(DataContext)
-  console.log(user);
-  const navigate = useNavigate()
+  const [{user}, dispatch] = useContext(DataContext);
+  // console.log(user);
+  const navigate = useNavigate();
+  const navStateData = useLocation();
+  console.log(navStateData); 
 
 
   const authHandler =async(e)=> {
@@ -41,7 +41,7 @@ function Auth() {
           user:userInfo.user
         })
         setLoading({ ...loading, signin:false });
-        navigate("/")
+        navigate(navStateData?.state?.redirect || "/") 
       }).catch((err) => {
         // console.log(err);
         setError(err.message);
@@ -58,7 +58,7 @@ function Auth() {
           user:userInfo.user
       })
       setLoading({...loading, signUp:false})
-      navigate("/")
+      navigate(navStateData?.state?.redirect || "/"); 
     }).catch((err) => {
         // console.log(err);
         setError(err.message);
@@ -83,6 +83,10 @@ function Auth() {
 
         <form>
           <h1>Sign in</h1>
+          {navStateData?.state?.msg && (
+            <small style={{ color: "red", padding: "5px", textAlign: "center", fontWeight: 'bold' }}>{navStateData?.state?.msg}
+            </small>
+          )}
           <div className={classes.inputGroup}>
             <label htmlFor="email">Email</label>
             <input
@@ -211,66 +215,5 @@ export default Auth;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import React from 'react'
-// import classes from './Signup.module.css'
-// import { Link } from 'react-router-dom';
-// // import Layout from '../../Components/Layout/Layout'
-
-// function Auth() {
-//   return (
-//     // <Layout>
-//     // <div>Signup</div>
-//     // </Layout>
-//     <section>
-//       {/* logo */}
-//       <Link rel="stylesheet" href="">
-//         <img src="" alt="" />
-//       </Link>
-
-//       {/* form */}
-//       <div className={classes.signin_form}>
-//         <form action="">
-//           <div>
-//             <label htmlFor="email">Email</label>
-//             <input type="email" id="email" />
-//           </div>
-//           <div>
-//             <label htmlFor="password">Password</label>
-//             <input type="password" id="password" />
-//           </div>
-//           <button className={classes.login_signinButton}>Sign in</button>
-//         </form>
-//         {/* Agreeement */}
-//         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime vero ipsum dolores earum voluptatibus dolorum sit commodi, provident at minus officia, obcaecati ipsa nulla. Quos pariatur explicabo recusandae et ea.</p>
-
-//         {/* Account Button */}
-//         <button>Creat your Amazon Account</button>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Auth
 
 

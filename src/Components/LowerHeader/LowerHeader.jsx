@@ -10,16 +10,16 @@ function LowerHeader() {
     };
 
     return (
+    
     <div className="header__bottom">
         <nav className="header__bottom-nav">
-        {/* Mobile Menu Icon */}
-        <div className="header__menu-icon" onClick={toggleMenu}>
-            <IoMenuSharp size={18} />
+        {/* Menu Icon + "All" Together */}
+        <div className="header__menu-container" onClick={toggleMenu}>
+        <IoMenuSharp className="header__menu-icon" size={18} />
+            <span>All</span>
         </div>
-
         {/* Navigation Links */}
-        <ul className={`header__bottom-links ${isMenuOpen ? "open" : ""}`}>
-            <li>All</li>
+        <ul className="header__bottom-links">
             <li>Medical Care</li>
             <li>Best Sellers</li>
             <li>Prime</li>
@@ -33,7 +33,7 @@ function LowerHeader() {
             <li>Pharmacy</li>
             <li>Registry</li>
         </ul>
-        </nav>
+    </nav>
     </div>
     );
 }

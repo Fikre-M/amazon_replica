@@ -1,11 +1,17 @@
+/* body {
+  margin: 0;
+  padding: 0;
+} */
+body {
+    background-color: #f3f3f3;
+}
 
-/* Main container to center the content */
 .authContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f3f3f3;
+    margin-top: -100px;
 }
 
 
