@@ -26,14 +26,14 @@ footer {
 
 .bottom_footer h4,
 .bottom_footer a {
-  position: relative;
-  text-decoration: none;
+    position: relative;
+    text-decoration: none;
 }
 
 
 .middle_footer ul li:hover,
 .middle_footer ul li a:hover {
-  text-decoration: underline;
+    -decoration: underline;
 }
 .footer_column {
     flex: 1;
@@ -80,6 +80,14 @@ footer {
     margin: auto;
     width: 100%;
 }
+.middle_footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 7 equal columns */
+    gap: 10px;
+    max-width: 1000px; /* Restrict content width */
+    margin: auto;
+    width: 100%;
+}
 
 .footer_category {
     padding: 10px;
@@ -114,20 +122,20 @@ footer {
 /* Responsive Design */
 @media (max-width: 900px) {
     .footer_links {
-        grid-template-columns: repeat(3, 1fr); /* Stack to 3 columns */
+        grid-template-columns: repeat(4, 1fr); /* Stack to 3 columns */
     }
 }
 
 @media (max-width: 600px) {
     .footer_links {
-        grid-template-columns: repeat(2, 1fr); /* Stack to 2 columns */
+        grid-template-columns: repeat(7, 1fr); /* Stack to 2 columns */
     }
 }
-/* @media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .flex { 
         flex-direction: column;
         }
-} */
+}
 
 
 .copyright_sec {
@@ -152,67 +160,16 @@ footer {
 }
 
 
-/* 
-
-.logo_Lang_Flag {
+.logo_Lang_Flag { 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    padding: 20px 0;
-    background-color: #232F3E;
-    border-top: 1px solid #3a4553;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-}
-
-.logo_Lang_Flag div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.logo_Lang_Flag a {
-    text-decoration: none;
-    color: rgb(175, 171, 171);
-    font-weight: bold;
-}
-.english{
-    border: 1px solid rgb(220, 214, 214);
-    border-radius: 3px;
-    padding: 10px;
-}
-.footer__logo img {
-  height: 30px;
-  transition: transdorm 0.3s ease-in-out;
-}
-.logoimg {
-  width: 100px; 
-  overflow: hidden;
-  transition: width 0.3s ease;
-}
-.logoimg img {
-    width: 100%; 
-    height: auto;
-    display: block;
-}
-
-
-.logo_Lang_Flag img {
-    width: 20px;
-    height: 10px;
-} */
-
-.logo_Lang_Flag {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    gap: 10px;
     padding: 20px 0;
     background-color: #232F3E;
     border-top: 1px solid #3a4553;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .logo_Lang_Flag div {
@@ -226,50 +183,39 @@ footer {
     color: rgb(247, 242, 242);
     font-weight: bold;
 }
-.english{
+
+.english {
     border: 1px solid rgb(220, 214, 214);
     border-radius: 3px;
     padding: 10px;
 }
+
 .footer__logo img {
-  /* height: 30px;  */
-  width: auto; /* important  */
-  height: auto; /* important */
-  max-width: 80px;  /*  Adjust this value  */
-  display: block; /* to prevent default inline spacing */
+    width: 40px; 
+    height: 24px; 
+    cursor: pointer;
 }
 
 .logo_Lang_Flag img {
-    width: 20px;
-    height: 10px;
+    width: 30px;  
+    height: 12px;  
+    margin-right: 10px;
 }
-.footer__logo {
-    display: flex;
-    align-items: center; /* Vertically align the logo */
-}
-
-
-
-
-
-
-
-
 
 
 .year{
-  text-align: center;
-  font-size: 12px;
-  padding-bottom: 30px;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 30px;
 }
 
 .default-footer,
 .cart-footer {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #131A22;
-  color: white;
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #131A22;
+    color: white;
+    padding: 20px;
 }
 
 

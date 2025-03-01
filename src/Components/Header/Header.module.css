@@ -6,14 +6,14 @@
   padding: 5px 0px;
   color: white;
   flex-wrap: nowrap;
-  position: fixed; /* Ensures it stays at the top */
+  position: fixed; 
   top: 0;
   left: 0;
-  width: 100%; /* Keeps width within the viewport */
+  width: 100%; 
   white-space: nowrap;
-  overflow-x: hidden; /* Prevents unnecessary scrolling */
-  z-index: 1000; /* Keeps it above other content */
-  gap: 10px; /* Adds space between elements */
+  overflow-x: hidden; 
+  z-index: 1000; 
+  gap: 10px; 
 }
 
 .header_top {
@@ -73,7 +73,7 @@
   border: none;
   padding: 10px;
   cursor: pointer;
-  display: block;
+  display: flex;
 }
 
 .header_language {
@@ -125,9 +125,9 @@
 .header_deliver, 
 .header_language, 
 .header_account { 
-  border: 1px solid transparent; /* Keeps space reserved */
+  border: 1px solid transparent;
   border-radius: 3px;
-  padding: 8px; /* Keep padding the same */
+  padding: 8px; 
 }
 
 .header_cart:hover, 
@@ -135,5 +135,112 @@
 .header_deliver:hover, 
 .header_language:hover, 
 .header_account:hover { 
-  border: 1px solid white; /* Now it just changes color, no shift */
+  border: 1px solid white; 
 }
+
+
+/* *2 option */
+
+/* .header {
+  background-color: #131921;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header_top {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.header_logo img {
+  width: 100px;
+  cursor: pointer;
+}
+
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header_search {
+  display: flex;
+  width: 90%;
+  max-width: 600px;
+  margin-top: 10px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.header_search_category {
+  background: #e6e6e6;
+  border: none;
+  padding: 10px;
+}
+
+.header_search_input {
+  flex-grow: 1;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.header_search_button {
+  background: #febd69;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header_top {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .header_search {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .header_top {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header_logo img {
+    width: 80px;
+  }
+
+  .header_right {
+    gap: 10px;
+  }
+
+  .header_search {
+    width: 100%;
+  }
+} */
+ /* *3rd */

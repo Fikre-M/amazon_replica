@@ -53,3 +53,50 @@ export const CategoryInfoData = [
     },
   },
 ];
+
+
+
+
+
+// export const CategoryInfoData = [
+//   {
+//     id: 7,
+//     title: "White Gold Plated Princess",
+//     price: 9.99,
+//     description:
+//       "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her...",
+//     category: "Jewelery",
+//     image: "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg",
+//     rating: { rate: 3, count: 400 },
+//   },
+//   {
+//     id: 14,
+//     title: "Samsung 49-Inch CHG90 144Hz Curved Gaming Monitor",
+//     price: 999.99,
+//     description:
+//       "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screens...",
+//     category: "Electronics",
+//     image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
+//     rating: { rate: 2.2, count: 140 },
+//   },
+//   {
+//     id: 3,
+//     title: "Men's Cotton Jacket",
+//     price: 55.99,
+//     description:
+//       "Great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions...",
+//     category: "Men's Clothing",
+//     image: "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg",
+//     rating: { rate: 4.7, count: 500 },
+//   },
+//   {
+//     id: 19,
+//     title: "Opna Women's Short Sleeve Moisture",
+//     price: 7.95,
+//     description:
+//       "100% Polyester, Machine wash, Lightweight, roomy, and highly breathable...",
+//     category: "Women's Clothing",
+//     image: "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg",
+//     rating: { rate: 4.5, count: 146 },
+//   },
+// ];

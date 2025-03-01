@@ -1,0 +1,21 @@
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: Light background */
+}
+
+.fade-loader {
+    animation: fadeInOut 2s infinite ease-in-out;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}

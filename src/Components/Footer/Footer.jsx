@@ -4,6 +4,7 @@ import styles from './Footer.module.css';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 
+
 function Footer() {
     const location = useLocation();
   const [showTop, setShowTop] = useState(false);
@@ -179,7 +180,7 @@ function Footer() {
         </div>
 
         <div className={styles.logo_Lang_Flag}>
-          <div className="footer__logo">
+          <div className={styles.footer__logo}>
             <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"

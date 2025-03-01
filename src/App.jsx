@@ -5,6 +5,7 @@ import Routere from "./Router";
 import { DataContext } from "./Components/DataProvider/Dataprovider";
 import { Type } from "./Utility/action.type";
 import { auth } from "./Utility/firebase";
+import './index.css'
 
 function App() {
   const [{ user }, dispatch] = useContext(DataContext); 

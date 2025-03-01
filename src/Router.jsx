@@ -10,7 +10,7 @@ import ProductDetail from './Pages/ProductDetail/ProductDetail'
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
 import ProtectedRoute from './Components/ProtectedRoute/ProtectedRoute'
-
+import './index.css'
 
 
 
