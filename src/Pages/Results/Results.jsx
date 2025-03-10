@@ -12,7 +12,7 @@ const Results = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if (!categoryName) return; // Prevent errors if categoryName is missing
+    if (!categoryName) return; 
 
     setIsLoading(true);
     axios

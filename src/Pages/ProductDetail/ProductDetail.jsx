@@ -6,6 +6,8 @@ import { productURL } from "../../API/endpoints";
 import { Oval } from "react-loader-spinner";
 import classes from "./ProductDetail.module.css";
 
+
+
 function ProductDetail() {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);

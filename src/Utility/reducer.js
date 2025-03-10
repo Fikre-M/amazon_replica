@@ -35,14 +35,33 @@ export const reducer = (state, action) => {
         return { ...state, basket: updatedBasket };
       }
 
+
       case Type.DECREMENT_QUANTITY: {
-        const updatedBasket = state.basket.map((item) =>
-          item.id === action.id
-            ? { ...item, quantity: Math.max(1, item.quantity - 1) }
-            : item
-        );
-        return { ...state, basket: updatedBasket }; //updatedBasket they use newBasket for class
+        const updatedBasket = state.basket
+          .map((item) =>
+            item.id === action.id
+              ? { ...item, quantity: item.quantity - 1 }
+              : item
+          )
+
+          .filter((item) => item.quantity > 0);
+
+        return { ...state, basket: updatedBasket };
       }
+
+      case Type.DECREMENT_QUANTITY: {
+        const updatedBasket = state.basket
+          .map((item) =>
+            item.id === action.id
+              ? { ...item, quantity: item.quantity - 1 }
+              : item
+          )
+          .filter((item) => item.quantity > 0); 
+
+        return { ...state, basket: updatedBasket };
+      }
+      
+
       //Basket is Cleared After Payment
       case "EMPTY_BASKET":
         return {
@@ -86,30 +105,6 @@ export const reducer = (state, action) => {
 
 
 
-
-
-
-
-
-// import {Type} from './action.type'
-
-// export const initialState = {
-//     basket:[]
-// }
-
-
-// export const reducer = (state, action) => {
-//     switch (action.type) {
-//         case Type.Add_TO_BASKET:
-//             return {
-//                 ...state,
-//                 basket:[...state.basket,action.item]
-//             }
-    
-//     default:
-//     return state;
-//     }
-// }
 
 
 

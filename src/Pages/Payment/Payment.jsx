@@ -11,18 +11,21 @@ import { useNavigate } from "react-router-dom";
 import Cliploader from "react-spinners/ClipLoader";
 import { doc, setDoc, collection } from "firebase/firestore"; 
 
+
+
+
 const Payment = () => {
   const [{ user, basket }, dispatch] = useContext(DataContext);
-  const navigate = useNavigate(); // Fixed useNavigate
+  const navigate = useNavigate();
 
   const totalItem =
     basket?.reduce((amount, item) => {
-      return amount + (item.amount || 1); // Default to 1 if amount is missing
+      return amount + (item.amount || 1); 
     }, 0) || 0;
 
   const total =
     basket?.reduce((amount, item) => {
-      return amount + item.price * (item.amount || 1); // Ensure amount is always valid
+      return amount + item.price * (item.amount || 1); 
     }, 0) || 0;
      console.log("Basket Contents:", basket); 
 

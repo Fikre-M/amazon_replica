@@ -13,7 +13,7 @@ function LowerHeader() {
     
     <div className="header__bottom">
         <nav className="header__bottom-nav">
-        {/* Menu Icon + "All" Together */}
+        {/* Menu Icon + "All" */}
         <div className="header__menu-container" onClick={toggleMenu}>
         <IoMenuSharp className="header__menu-icon" size={18} />
             <span>All</span>

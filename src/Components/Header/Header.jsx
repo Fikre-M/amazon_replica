@@ -33,8 +33,8 @@ const Header = () => {
             <FaMapMarkerAlt className={classes.header_icon} />
             <div>
               <p className={classes.header_deliver_text}>Deliver to</p>
-              <span className={classes.header_location}>
-                Update Location
+              <span className={classes.header_location}> Ethiopia
+                {/* Update Location */}
               </span>
             </div>
           </div>

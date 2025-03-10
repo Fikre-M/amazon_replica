@@ -46,6 +46,20 @@ export default Product;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // using fetch method 
 
 
