@@ -3,8 +3,8 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import classes from "./Carousel.module.css";
 import { imges } from "./data"; 
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+// import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+// import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 
 const CarouselImage = () => {
   return (
@@ -21,7 +21,7 @@ const CarouselImage = () => {
               onClick={onClickHandler}
               className={classes.customArrow + " " + classes.prev}
             >
-              <KeyboardArrowLeftIcon />
+              {/* <KeyboardArrowLeftIcon /> */}
             </button>
           )
         }
@@ -32,7 +32,7 @@ const CarouselImage = () => {
               onClick={onClickHandler}
               className={classes.customArrow + " " + classes.next}
             >
-              <KeyboardArrowRightIcon />
+              {/* <KeyboardArrowRightIcon /> */}
             </button>
           )
         }

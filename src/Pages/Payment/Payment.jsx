@@ -27,7 +27,7 @@ const Payment = () => {
     basket?.reduce((amount, item) => {
       return amount + item.price * (item.amount || 1); 
     }, 0) || 0;
-     console.log("Basket Contents:", basket); 
+    console.log("Basket Contents:", basket); 
 
 
   const [carderror, setCarderror] = useState(null);
